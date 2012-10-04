@@ -1,0 +1,8 @@
+class Comment < ActiveRecord::Base
+  attr_accessible :body, :commenter, :post_id
+  belongs_to :post
+  validates :commenter, :presence => true
+  validates :post_id, :presence => true
+  validates :body, :presence => true
+                   
+end
